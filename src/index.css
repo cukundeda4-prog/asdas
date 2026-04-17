@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-aircanada-red: #D82927;
+  --color-aircanada-black: #000000;
+  --color-aircanada-white: #FFFFFF;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  @apply text-white font-sans min-h-screen antialiased;
+  background: #05070a;
+  background-image: radial-gradient(circle at top right, #1a2a44 0%, #05070a 100%);
+  background-attachment: fixed;
+}
+
+.glass-panel {
+  @apply bg-white/8 backdrop-blur-md border border-white/15 shadow-2xl;
+}
+
+.sidebar-glass {
+  @apply bg-black/40 backdrop-blur-xl border-r border-white/15;
+}
+
+.frosted-input {
+  @apply bg-black/20 border border-white/15 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-1 focus:ring-aircanada-red/50 transition-all;
+}
+
+.red-button {
+  @apply bg-aircanada-red text-white hover:brightness-110 transition-all rounded-lg px-6 py-2 font-semibold shadow-lg shadow-aircanada-red/20;
+}
+
+.status-badge {
+  @apply bg-green-500/20 text-green-400 px-3 py-1 rounded-md text-[10px] font-bold tracking-wider;
+}
+
